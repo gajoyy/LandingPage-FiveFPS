@@ -239,6 +239,7 @@ body {
     text-align: center;
     font-weight: 500;
     font-size: 32px;
+    margin-bottom: 50px;
 }
 
 .container__ai-image {
@@ -250,32 +251,65 @@ body {
     width: 800px;
 }
 
-.ai__card {
+.ai__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.ai__card-primario,
+.ai__card-secundario {
     background-color: var(--cinza);
     width: 400px;
     height: 500px;
     border-radius: 4px;
     border: 1px solid #383838;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.ai__card h1 {
+.ai__card-primario h1,
+.ai__card-secundario h1 {
     color: var(--branco-principal);
     background-color: var(--vermelho);
     width: 116.27px;
     height: 37px;
-    color: 18px;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 600;
 }
 
-.ai__card h3 {
+.ai__card-secundario h1 {
+    width: 194.7px;
+    padding: 10px;
+}
+
+.ai__card-primario h3,
+.ai__card-secundario h3 {
     color: var(--branco-principal);
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .card__lista li {
     display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
 }
 
 .card__lista img {
     width: 18px;
+}
+
+.card__lista p {
+    color: var(--branco-terciario);
+    font-size: 14px;
 }
 
 .container__no-lag {
@@ -308,4 +342,52 @@ body {
     height: 45px;
     background-color: var(--vermelho);
     margin: 15px 7%;
+}
+
+.c__server-titulo {
+    color: var(--vermelho);
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.c__server-subtitulo {
+    color: var(--branco-secundario);
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.container__policy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    color: var(--branco-principal);
+    text-align: center;
+    gap: 7rem;
+}
+
+.container__policy .right {
+    max-width: 400px;
+}
+
+.right {
+    max-width: 50%;
+}
+
+.container__policy img {
+    width: 300px;
+}
+
+footer {
+    margin-top: 25px;
+    color: var(--branco-terciario);
+    text-align: center;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 45px;
 }
