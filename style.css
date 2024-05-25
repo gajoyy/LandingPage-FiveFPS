@@ -45,6 +45,7 @@ body {
     width: 400px;
     height: 50px;
     text-align: center;
+    border: blue;
 }
 
 .btn-main:hover {
@@ -106,7 +107,7 @@ body {
     width: 116.27px;
     height: 37px;
     font-size: 18px;
-    padding: 5px 10px 10px 10px;
+    padding: 7px 10px 10px 10px;
     text-align: center;
     border-radius: 4px;
     font-weight: 600;
@@ -247,8 +248,8 @@ body {
 }
 
 .red-ball {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
     background-color: var(--vermelho);
     border-radius: 10px;
 }
@@ -369,72 +370,6 @@ body {
     flex-direction: column;
     gap: 10px;
     height: 180px;
-}
-
-.red-text {
-    color: var(--vermelho);
-}
-
-.white-text {
-    color: var(--branco-secundario);
-}
-
-.white-gray {
-    color: var(--branco-terciario);
-}
-
-.container-icon {
-    display: flex;
-    color: var(--branco-principal);
-    gap: 10px;
-    align-items: center;
-}
-
-.container-icon img {
-    width: 18px;
-}
-
-.main__content p {
-    color: var(--branco-terciario);
-    font-size: 12px;
-    line-height: 20px;
-}
-
-.icon__more__container {
-    background-color: #BD162C40;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #BD162C;
-    border-radius: 4px;
-}
-
-.container__compatibility {
-    text-align: center;
-}
-
-.compatibility__content {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
-.container__compatibility h1 {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.container__compatibility h2 {
-    font-size: 20px;
-    font-weight: 400;
-}
-
-.bg-black {
-    background-color: #000000;
 }
 
 .container__games h1 {
