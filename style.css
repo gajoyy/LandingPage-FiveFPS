@@ -150,6 +150,10 @@ body {
     gap: 20px;
 }
 
+.right__content p {
+    font-weight: 600;
+}
+
 .right__content span {
     background-color: var(--vermelho);
     font-weight: 600;
@@ -187,7 +191,6 @@ body {
     background-color: #bababa34;
     margin: 115px auto 50px auto;
 }
-
 
 .container__resources h1 {
     color: var(--vermelho);
@@ -613,6 +616,10 @@ body {
     font-weight: 400;
 }
 
+.bg-black {
+    background-color: #000000;
+}
+
 .container__games h1 {
     color: var(--vermelho);
     text-align: center;
@@ -627,6 +634,12 @@ body {
     font-weight: 500;
     font-size: 20px;
     margin-bottom: 50px;
+}
+
+.container__images__games {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container__plans h1 {
@@ -702,6 +715,25 @@ body {
     color: var(--branco-secundario);
     font-weight: 500;
     font-size: 14px;
+}
+
+.plans__card-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.card-btn {
+    background-color: var(--vermelho);
+    color: var(--branco-principal);
+    border: none;
+    font-weight: 800;
+    padding: 15px;
+    border-radius: 2px;
+    width: 400px;
+    height: 50px;
+    text-align: center;
 }
 
 #checkYellow {
