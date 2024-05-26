@@ -246,3 +246,13 @@ body {
     height: 17px;
     border-radius: 2px;
 }
+
+@media (min-width: 760px) {
+    #policy {
+        flex-direction: row-reverse;
+    }
+
+    #policyCards {
+        justify-content: left;
+    }
+}
