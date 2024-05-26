@@ -121,6 +121,21 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "none";
         overlay.style.display = "none";
     }
-
-    openModal()
 });
+
+const oneYear = document.querySelector('#oneYear');
+const threeMounths = document.querySelector('#threeMounths');
+const oneMounth = document.querySelector('#oneMounth');
+
+function uncheckOthers(clickedId) {
+
+    var inputIds = ['oneYear', 'threeMounths', 'oneMounth'];
+
+    for (let i = 0; i < inputIds.length; i++) {
+        var currentId = inputIds[i];
+
+        if (currentId !== clickedId) {
+            document.getElementById(currentId).checked = false;
+        }
+    }
+}

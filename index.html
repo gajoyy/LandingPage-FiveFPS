@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./assets/fiveico.svg">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/material-ui/4.12.4/index.js"
+        integrity="sha512-wEnX3bNd/CdyrOFR0KIGlHihK/w9x3/It8Vc18aymEF/F/f1q0Mq8T+GSxF1wYUACLEGECapuIYQdQlKY1LBJw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script.js" defer></script>
 </head>
 
@@ -83,7 +86,7 @@
     <div id="overlay"></div>
 
     <div class="modal" id="modal">
-        <div class="modal-content" style="display: flex; flex-direction: column; gap: 20px;">
+        <div class="modal-content">
             <div class="modal-header">
                 <div style="display: flex; align-items: center; gap: 5px;">
                     <img src="./assets/1f60e.png" alt="Emoji">
@@ -97,25 +100,25 @@
             <div style="width: 100%; background-color: #393939; height: 2px; opacity: 0.6; border-radius: 10px;"></div>
             <div class="container__prices-modal">
                 <div class="container__modal-line">
-                    <div style="display: flex; gap: 10px;">
-                        <input type="checkbox" checked>
-                        <h3>UM ANO</h3>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <input id="oneYear" type="checkbox" onclick="uncheckOthers('oneYear')" checked>
+                        <h2 for="oneYear">UM ANO</h2>
                         <span>67% OFF</span>
                     </div>
                     <h2>R$ 179,90</h2>
                 </div>
                 <div class="container__modal-line">
-                    <div style="display: flex; gap: 10px;">
-                        <input type="checkbox">
-                        <h3>TRÊS MESES</h3>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <input id="threeMounths" type="checkbox" onclick="uncheckOthers('threeMounths')">
+                        <h2>TRÊS MESES</h2>
                         <span>48% OFF</span>
                     </div>
                     <h2>R$ 69,90</h2>
                 </div>
                 <div class="container__modal-line">
-                    <div style="display: flex; gap: 10px;">
-                        <input type="checkbox">
-                        <h3>UM MÊS</h3>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <input id="oneMounth" type="checkbox" onclick="uncheckOthers('oneMounth')">
+                        <h2>UM MÊS</h2>
                     </div>
                     <h2>R$ 29,90</h2>
                 </div>
@@ -124,24 +127,27 @@
             <div class="modal__container-detalhes">
                 <h1>Detalhes da Compra</h1>
                 <div class="modal-detalhes">
-                    <div class="detalhes-emoji" style="display: flex; gap: 5px; align-items: center;">
+                    <div class="detalhes-emoji">
                         <img src="./assets/RELOGINHO.png" alt="Relógio" style="width: 14px;">
-                        <span>Três Meses</span>
+                        <span>Um Ano</span>
                     </div>
-                    <div class="detalhes-precos" style="display: flex; gap: 5px; align-items: center;">
-                        <h2 style="background-color: #E1C111; padding: 2px 5px;">R$ 134,99</h2>
-                        <h2 style="background-color: var(--verde); padding: 2px 5px;">R$ 69,90</h2>
+                    <div class="detalhes-precos">
+                        <h2 style="background-color: #E1C111; text-decoration: line-through;">R$ 539,99</h2>
+                        <h2 style="background-color: var(--verde);">R$ 179,90</h2>
                     </div>
                 </div>
             </div>
         </div>
         <div class="modal-footer">
-            <p>Todas as instruções para download do app serão enviadas para seu e-mail após a aprovação da compra.
+            <p>Todas as instruções para download do app serão enviadas para seu e-mail após a aprovação
+                da compra.
             </p>
-            <button id="obtenhaAgoraButton" class="modal__botao">OBTENHA AGORA!</button>
+
         </div>
+        <button id="obtenhaAgoraButton" class="modal__botao">OBTENHA AGORA!</button>
+        <img src="assets/SELO.svg" alt="Selo" style="width: 80px; position: absolute; top: 93%; left: 92%;" id="selo">
     </div>
-    </div>
+
 
     <!--TUTORIAL-->
     <div class="relative w-full flex flex-col justify-start items-start gap-y-[50px] py-[100px] overflow-hidden">
@@ -342,7 +348,8 @@
             </div>
             <div
                 class="w-[400px] h-[500px] bg-[#222222] flex flex-col justify-start items-start gap-y-[20px] border border-[rgba(255,255,255,0.1)] rounded-[4px] p-[20px]">
-                <h2 class="text-[18px] bg-[#BD162C] text-[#FFFFFF] font-[700] px-[10px] py-[5px] rounded-[4px]">FRAME
+                <h2 class="text-[18px] bg-[#BD162C] text-[#FFFFFF] font-[700] px-[10px] py-[5px] rounded-[4px]">
+                    FRAME
                     GENERATION</h2>
                 <p class="text-[14px] text-[#FFFFFF] font-[400]">Eleve a qualidade de seus jogos de
                     30 FPS para 60 FPS ou de 60 FPS para 120 FPS.</p>
@@ -449,12 +456,14 @@
                                 <path fill="#f8e509" fill-rule="evenodd"
                                     d="m321.4 436 301.5-195.7L319.6 44 17.1 240.7 321.4 436z"></path>
                                 <path fill="#2b49a3" fill-rule="evenodd"
-                                    d="M452.8 240c0 70.3-57.1 127.3-127.6 127.3A127.4 127.4 0 1 1 452.8 240z"></path>
+                                    d="M452.8 240c0 70.3-57.1 127.3-127.6 127.3A127.4 127.4 0 1 1 452.8 240z">
+                                </path>
                                 <path fill="#ffffef" fill-rule="evenodd"
                                     d="m283.3 316.3-4-2.3-4 2 .9-4.5-3.2-3.4 4.5-.5 2.2-4 1.9 4.2 4.4.8-3.3 3m86 26.3-3.9-2.3-4 2 .8-4.5-3.1-3.3 4.5-.5 2.1-4.1 2 4.2 4.4.8-3.4 3.1m-36.2-30-3.4-2-3.5 1.8.8-3.9-2.8-2.9 4-.4 1.8-3.6 1.6 3.7 3.9.7-3 2.7m87-8.5-3.4-2-3.5 1.8.8-3.9-2.7-2.8 3.9-.4 1.8-3.5 1.6 3.6 3.8.7-2.9 2.6m-87.3-22-4-2.2-4 2 .8-4.6-3.1-3.3 4.5-.5 2.1-4.1 2 4.2 4.4.8-3.4 3.2m-104.6-35-4-2.2-4 2 1-4.6-3.3-3.3 4.6-.5 2-4.1 2 4.2 4.4.8-3.3 3.1m13.3 57.2-4-2.3-4 2 .9-4.5-3.2-3.3 4.5-.6 2.1-4 2 4.2 4.4.8-3.3 3.1m132-67.3-3.6-2-3.6 1.8.8-4-2.8-3 4-.5 1.9-3.6 1.7 3.8 4 .7-3 2.7m-6.7 38.3-2.7-1.6-2.9 1.4.6-3.2-2.2-2.3 3.2-.4 1.5-2.8 1.3 3 3 .5-2.2 2.2m-142.2 50.4-2.7-1.5-2.7 1.3.6-3-2.1-2.2 3-.4 1.4-2.7 1.3 2.8 3 .6-2.3 2M419 299.8l-2.2-1.1-2.2 1 .5-2.3-1.7-1.6 2.4-.3 1.2-2 1 2 2.5.5-1.9 1.5">
                                 </path>
                                 <path fill="#ffffef" fill-rule="evenodd"
-                                    d="m219.3 287.6-2.7-1.5-2.7 1.3.6-3-2.1-2.2 3-.4 1.4-2.7 1.3 2.8 3 .6-2.3 2"></path>
+                                    d="m219.3 287.6-2.7-1.5-2.7 1.3.6-3-2.1-2.2 3-.4 1.4-2.7 1.3 2.8 3 .6-2.3 2">
+                                </path>
                                 <path fill="#ffffef" fill-rule="evenodd"
                                     d="m219.3 287.6-2.7-1.5-2.7 1.3.6-3-2.1-2.2 3-.4 1.4-2.7 1.3 2.8 3 .6-2.3 2m42.3 3-2.6-1.4-2.7 1.3.6-3-2.1-2.2 3-.4 1.4-2.7 1.3 2.8 3 .5-2.3 2.1m-4.8 17-2.6-1.5-2.7 1.4.6-3-2.1-2.3 3-.4 1.4-2.7 1.3 2.8 3 .6-2.3 2m87.4-22.2-2.6-1.6-2.8 1.4.6-3-2-2.3 3-.3 1.4-2.7 1.2 2.8 3 .5-2.2 2.1m-25.1 3-2.7-1.5-2.7 1.4.6-3-2-2.3 3-.3 1.4-2.8 1.2 2.9 3 .5-2.2 2.1m-68.8-5.8-1.7-1-1.7.8.4-1.9-1.3-1.4 1.9-.2.8-1.7.8 1.8 1.9.3-1.4 1.3m167.8 45.4-2.6-1.5-2.7 1.4.6-3-2.1-2.3 3-.4 1.4-2.7 1.3 2.8 3 .6-2.3 2m-20.8 6-2.2-1.4-2.3 1.2.5-2.6-1.7-1.8 2.5-.3 1.2-2.3 1 2.4 2.5.4-1.9 1.8m10.4 2.3-2-1.2-2.1 1 .4-2.3-1.6-1.7 2.3-.3 1.1-2 1 2 2.3.5-1.7 1.6m29.1-22.8-2-1-2 1 .5-2.3-1.6-1.7 2.3-.3 1-2 1 2.1 2.1.4-1.6 1.6m-38.8 41.8-2.5-1.4-2.7 1.2.6-2.8-2-2 3-.3 1.3-2.5 1.2 2.6 3 .5-2.3 1.9m.6 14.2-2.4-1.4-2.4 1.3.6-2.8-1.9-2 2.7-.4 1.2-2.5 1.1 2.6 2.7.5-2 2m-19-23.1-1.9-1.2-2 1 .4-2.2-1.5-1.7 2.2-.2 1-2 1 2 2.2.4-1.6 1.6m-17.8 2.3-2-1.2-2 1 .5-2.2-1.6-1.7 2.3-.2 1-2 1 2 2.1.4-1.6 1.6m-30.4-24.6-2-1.1-2 1 .5-2.3-1.6-1.6 2.2-.3 1-2 1 2 2.2.5-1.6 1.5m3.7 57-1.6-.9-1.8.9.4-2-1.3-1.4 1.9-.2.9-1.7.8 1.8 1.9.3-1.4 1.3m-46.2-86.6-4-2.3-4 2 .9-4.5-3.2-3.3 4.5-.6 2.2-4 1.9 4.2 4.4.8-3.3 3.1">
                                 </path>
@@ -852,7 +861,7 @@
             </ul>
         </div>
         <div class="flex justify-center align-center mt-10">
-            <button
+            <button onclick="openModal()"
                 class="border-none font-extrabold p-4 rounded-sm w-[360px] h-[50px] text-center text-[#FAFAFA] bg-[#BD162C] hover:bg-[#991526]">OBTENHA
                 AGORA!</button>
         </div>
