@@ -121,4 +121,6 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "none";
         overlay.style.display = "none";
     }
+
+    openModal()
 });

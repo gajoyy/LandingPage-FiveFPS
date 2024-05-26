@@ -55,11 +55,11 @@
                     </div>
                 </div>
             </div>
-            <div class="relative flex justify-center items-center cursor-pointer" style="width: 700px;">
-                <div class="absolute bottom-[-40px] right-[-40px] z-[5]"><img width="170" src="/assets/icohero.png">
+            <div class="relative flex justify-center items-center cursor-pointer w-[700px]" id="containerImageHero">
+                <div class="absolute bottom-[-40px] right-[-40px] z-[5]"><img width="170" src="./assets/icohero.png">
                 </div>
                 <div class="relative flex justify-center items-center overflow-hidden rounded-[4px] overflow-hidden cursor-pointer"
-                    style="width: 700px;">
+                    style="width: 700px;" id="imageHero">
                     <div class="absolute top-[60px] right-[60px]">
                         <div class="w-[1px] h-[1px] pointer-events-none"
                             style="box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 600px 60px;"></div>
@@ -67,14 +67,14 @@
                     <div class="absolute bottom-[60px] left-[60px]">
                         <div class="w-[1px] h-[1px] pointer-events-none"
                             style="box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 600px 60px;"></div>
-                    </div><img src="https://i.ibb.co/jrb67z5/2-2-0-frame.png">
+                    </div><img src="https://i.ibb.co/jrb67z5/2-2-0-frame.png" />
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="flex justify-center" id="openModalBtn">
-        <button
+    <div class="container__button-after-hero flex justify-center">
+        <button id="openModalBtn"
             class="bg-[#BD162C] text-[#FAFAFA] border-none font-bold p-2 rounded w-96 h-12 text-center hover:bg-[#991526] cursor-pointer">OBTENHA
             AGORA!</button>
     </div>
@@ -83,21 +83,64 @@
     <div id="overlay"></div>
 
     <div class="modal" id="modal">
-        <div class="modal-content">
+        <div class="modal-content" style="display: flex; flex-direction: column; gap: 20px;">
             <div class="modal-header">
-                <img src="./assets/1f60e.png" alt="Emoji">
-                <h2>Adquira o tempo de acesso</h2>
+                <div style="display: flex; align-items: center; gap: 5px;">
+                    <img src="./assets/1f60e.png" alt="Emoji">
+                    <h2>Adquira o tempo de acesso</h2>
+                </div>
                 <button id="closeButton">&times;</button>
             </div>
             <div class="modal-body">
                 <p>Garanta agora o seu tempo de acesso ao FiveFPS!</p>
             </div>
-            <div class="modal-footer">
-                <p>Todas as instruções para download do app serão enviadas para seu e-mail após a aprovação da compra.
-                </p>
-                <button id="obtenhaAgoraButton">OBTENHA AGORA!</button>
+            <div style="width: 100%; background-color: #393939; height: 2px; opacity: 0.6; border-radius: 10px;"></div>
+            <div class="container__prices-modal">
+                <div class="container__modal-line">
+                    <div style="display: flex; gap: 10px;">
+                        <input type="checkbox" checked>
+                        <h3>UM ANO</h3>
+                        <span>67% OFF</span>
+                    </div>
+                    <h2>R$ 179,90</h2>
+                </div>
+                <div class="container__modal-line">
+                    <div style="display: flex; gap: 10px;">
+                        <input type="checkbox">
+                        <h3>TRÊS MESES</h3>
+                        <span>48% OFF</span>
+                    </div>
+                    <h2>R$ 69,90</h2>
+                </div>
+                <div class="container__modal-line">
+                    <div style="display: flex; gap: 10px;">
+                        <input type="checkbox">
+                        <h3>UM MÊS</h3>
+                    </div>
+                    <h2>R$ 29,90</h2>
+                </div>
+            </div>
+            <div style="width: 100%; background-color: #393939; height: 2px; opacity: 0.6; border-radius: 10px;"></div>
+            <div class="modal__container-detalhes">
+                <h1>Detalhes da Compra</h1>
+                <div class="modal-detalhes">
+                    <div class="detalhes-emoji" style="display: flex; gap: 5px; align-items: center;">
+                        <img src="./assets/RELOGINHO.png" alt="Relógio" style="width: 14px;">
+                        <span>Três Meses</span>
+                    </div>
+                    <div class="detalhes-precos" style="display: flex; gap: 5px; align-items: center;">
+                        <h2 style="background-color: #E1C111; padding: 2px 5px;">R$ 134,99</h2>
+                        <h2 style="background-color: var(--verde); padding: 2px 5px;">R$ 69,90</h2>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="modal-footer">
+            <p>Todas as instruções para download do app serão enviadas para seu e-mail após a aprovação da compra.
+            </p>
+            <button id="obtenhaAgoraButton" class="modal__botao">OBTENHA AGORA!</button>
+        </div>
+    </div>
     </div>
 
     <!--TUTORIAL-->
@@ -236,11 +279,13 @@
     <!--INTELIGÊNCIA ARTIFICIAL-->
     <div
         class="relative w-full flex flex-col justify-start items-start gap-y-[50px] pt-[50px] pb-[100px] overflow-hidden">
-        <div class="absolute w-full flex justify-end bottom-[0px] right-[0px]">
-            <div class="w-[1px] h-[1px] pointer-events-none"
-                style="box-shadow: rgba(189, 22, 44, 0.2) 0px 0px 100px 200px;">
+        <div class="absolute w-full flex justify-end bottom-[0px] right-[30px]">
+            <div class="w-[1px] h-[1px] pointer-events-none" id="boxShadow1">
             </div>
         </div>
+
+
+
         <div class="w-full flex flex-col justify-center items-center">
             <p class="text-[24px] text-[#BD162C] font-[700]">INTELIGÊNCIA ARTIFICIAL</p>
             <p class="text-[18px] sm:text-[32px] text-[#FAFAFA] font-[400]">UPSCALING E FRAME
@@ -312,7 +357,12 @@
     </div>
 
     <!--SPLIT TUNNELING -->
-    <div class=" w-full flex flex-col justify-start items-start gap-y-[40px] px-[15px] md:px-[40px] py-[80px] mt-10">
+    <div
+        class="relative w-full flex flex-col justify-start items-start gap-y-[40px] px-[15px] md:px-[40px] py-[80px] mt-10 overflow-hidden">
+        <div class="absolute w-full flex justify-start top-[0px] left-[0px]">
+            <div class="w-[1px] h-[1px] pointer-events-none" id="boxShadow2">
+            </div>
+        </div>
         <div class="w-full flex flex-col justify-center items-center">
             <p class="text-[24px] text-[#BD162C] font-[700] text-center">SPLIT TUNNELING</p>
             <p class="text-[20px] lg:text-[32px] text-[#FAFAFA] font-[400] text-center">ACABE COM O
@@ -379,7 +429,10 @@
     </div>
 
     <!--VEJA SEU PING APRIMORADO-->
-    <div class="w-full flex flex-col gap-y-[60px] px-[40px] py-[80px]">
+    <div class="relative w-full flex flex-col gap-y-[60px] px-[40px] py-[80px] overflow-hidden">
+        <div class="absolute w-full flex justify-end bottom-[0px] right-[0px]">
+            <div class="w-[1px] h-[1px] pointer-events-none" id="boxShadow3"></div>
+        </div>
         <div class="w-full flex flex-col justify-center items-center">
             <p class="text-[24px] text-[#BD162C] font-[700] text-center">VEJA SEU PING APRIMORADO!</p>
             <p class="text-[20px] lg:text-[32px] text-[#FAFAFA] font-[400] text-center">VERIFIQUE
