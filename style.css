@@ -246,14 +246,3 @@ body {
     height: 17px;
     border-radius: 2px;
 }
-
-.red-effect {
-    background-color: var(--vermelho);
-    float: right;
-    opacity: 0.22;
-    border-radius: 5%;
-    box-shadow: -120px 0px 250px 280px var(--vermelho);
-    position: absolute;
-    z-index: 0;
-    right: 0;
-}
