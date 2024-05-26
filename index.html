@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./assets/fiveico.svg">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
 
     <!--Potencialize Seu Desempenho-->
-    <section id="BUY_SECTION" class="relative w-full min-h-[800px]"
+    <div id="BUY_SECTION" class="relative w-full min-h-[800px]"
         style="background-image: url(&quot;https://i.imgur.com/3gR8GpX.png&quot;); background-size: contain; background-position: left bottom; background-repeat: no-repeat;">
         <div
             class="absolute w-full h-full flex flex-wrap flex-row justify-center items-center gap-x-[40px] gap-y-[40px] px-[40px] py-[80px] overflow-hidden">
@@ -70,10 +71,33 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <div class="container__button-after-hero">
-        <button class="btn-main">OBTENHA AGORA!</button>
+    <div class="flex justify-center" id="openModalBtn">
+        <button
+            class="bg-[#BD162C] text-[#FAFAFA] border-none font-bold p-2 rounded w-96 h-12 text-center hover:bg-[#991526] cursor-pointer">OBTENHA
+            AGORA!</button>
+    </div>
+
+    <!-- MODAL -->
+    <div id="overlay"></div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="./assets/1f60e.png" alt="Emoji">
+                <h2>Adquira o tempo de acesso</h2>
+                <button id="closeButton">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Garanta agora o seu tempo de acesso ao FiveFPS!</p>
+            </div>
+            <div class="modal-footer">
+                <p>Todas as instruções para download do app serão enviadas para seu e-mail após a aprovação da compra.
+                </p>
+                <button id="obtenhaAgoraButton">OBTENHA AGORA!</button>
+            </div>
+        </div>
     </div>
 
     <!--TUTORIAL-->
@@ -460,7 +484,7 @@
                     </div>
                     <div class="flex justify-start items-center gap-x-[5px]">
                         <div class="relative w-[12px] h-[12px] bg-[#BD162C] rounded-full">
-                            <div class="absolute w-[12px] h-[12px] bg-[#BD162C] rounded-full"
+                            <div class="absolute w-[12px] h-[12px] bg-[#BD162C] rounded-full" id="redBall"
                                 style="top: 50%; left: 50%; transform: translate(-50%, -50%); width: 13.579px; height: 13.579px; opacity: 0.7;">
                             </div>
                         </div>
@@ -613,8 +637,7 @@
                         <div class="absolute bottom-[60px] right-[60px]" style="opacity: 0;">
                             <div class="w-[1px] h-[1px] pointer-events-none"
                                 style="box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 400px 100px;"></div>
-                        </div><img alt="" src="./assets/cs2-with-perf-overlay.webp" width="100%" style="opacity: 1;"
-                            id="experimenteImg">
+                        </div><img alt="" src="./assets/cs2-with-perf-overlay.webp" width="100%" id="experimenteImg">
                     </div>
                 </div>
                 <div class="w-full grid grid-cols-2 gap-[20px]" id="experimentContent">
@@ -775,9 +798,10 @@
                 </li>
             </ul>
         </div>
-        <div class="plans__card-btn">
-            <button class="border-none font-extrabold p-4 rounded-sm w-[360px] h-[50px] text-center"
-                style="background-color: var(--vermelho); color: var(--branco-principal);">OBTENHA AGORA!</button>
+        <div class="flex justify-center align-center mt-10">
+            <button
+                class="border-none font-extrabold p-4 rounded-sm w-[360px] h-[50px] text-center text-[#FAFAFA] bg-[#BD162C] hover:bg-[#991526]">OBTENHA
+                AGORA!</button>
         </div>
     </section>
 
@@ -841,7 +865,8 @@
         <div class="flex flex-col justify-center items-center gap-y-[5px]">
             <p class="text-[24px] text-[#FFFFFF] text-center font-[700] max-w-[400px]">Política de Devolução</p>
             <p class="text-[14px] text-[#BABABA] text-center font-[400] max-w-[400px]">Se em até <span
-                    class="text-[#BD162C] font-[700]">7 dias</span> da compra do produto, você não estiver satisfeito,
+                    class="text-[#BD162C] font-[700]">7 dias</span> da compra do produto, você não estiver
+                satisfeito,
                 basta entrar em contato solicitando o cancelamento e devolução do produto, bem como o <span
                     class="text-[#BD162C] font-[700]">reembolso de todo o seu dinheiro</span>, sem qualquer
                 questionamento ou burocracia.</p>

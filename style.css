@@ -24,34 +24,11 @@ body {
     overflow-x: hidden;
 }
 
-.container__button-after-hero {
-    display: flex;
-    justify-content: center;
-}
-
 @media (max-width: 1501px) {
     .container__button-after-hero {
         margin-top: 60px;
     }
 }
-
-.btn-main {
-    background-color: var(--vermelho);
-    color: var(--branco-principal);
-    border: none;
-    font-weight: 800;
-    padding: 15px;
-    border-radius: 2px;
-    width: 400px;
-    height: 50px;
-    text-align: center;
-}
-
-.btn-main:hover {
-    background-color: #991526;
-    cursor: pointer;
-}
-
 
 .container__plans h1 {
     color: var(--vermelho);
@@ -128,13 +105,6 @@ body {
     font-size: 14px;
 }
 
-.plans__card-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-}
-
 #checkYellow {
     background-color: var(--verde);
     width: 17px;
@@ -162,4 +132,64 @@ body {
         width: 900px;
         gap: 50px;
     }
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 300px;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.modal-header img {
+    width: 22px;
+    height: 22px;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.modal-body p {
+    margin: 0;
+}
+
+.modal-footer {
+    margin-top: 10px;
+}
+
+#closeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #888;
 }
