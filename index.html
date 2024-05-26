@@ -210,68 +210,12 @@
     </div>
 
     <!--INTELIGÊNCIA ARTIFICIAL-->
-    <section class="container__ai">
-        <h1>INTELIGÊNCIA ARTIFICIAL</h1>
-        <h2>UPSCALING E FRAME GENERATION</h2>
-        <div class="container__ai-image">
-            <img src="assets/computer.png" alt="Computador Imagem">
+    <div
+        class="relative w-full flex flex-col justify-start items-start gap-y-[50px] pt-[50px] pb-[100px] overflow-hidden">
+        <div class="absolute w-full flex justify-end bottom-[0px] right-[0px]">
+
         </div>
-        <div class="ai__cards">
-            <div class="ai__card-primario">
-                <h1>UPSCALING</h1>
-                <h3>Aumente seu desempenho em até 200 FPS a mais ao aplicar alguns dos algoritmos de upscaling abaixo:
-                </h3>
-                <ul class="card__lista">
-                    <li>
-                        <img src="assets/box.png" alt="Caixa">
-                        <p>AMD Fidelity Super Resolution</p>
-                    </li>
-                    <li>
-                        <img src="assets/box.png" alt="Caixa">
-                        <p>NVIDIA Image Scaling</p>
-                    </li>
-                    <li>
-                        <img src="assets/box.png" alt="Caixa">
-                        <p>Integer Number</p>
-                    </li>
-                    <li>
-                        <img src="assets/box.png" alt="Caixa">
-                        <p>Nearest Neighbor</p>
-                    </li>
-                    <li>
-                        <img src="assets/box.png" alt="Caixa">
-                        <p>xBR</p>
-                    </li>
-                    <li>
-                        <img src="assets/box.png" alt="Caixa">
-                        <p>Anime4K</p>
-                    </li>
-                    <li>
-                        <img src="assets/box.png" alt="Caixa">
-                        <p>Sharp Bilinear</p>
-                    </li>
-                    <li>
-                        <img src="assets/box.png" alt="Caixa">
-                        <p>FFUS (FiveFPS Upscaling)</p>
-                    </li>
-                    <li>
-                        <img src="assets/box.png" alt="Caixa">
-                        <p>Bicubic CAS</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="ai__card-secundario">
-                <h1>FRAME GENERATION</h1>
-                <h3>Eleve a qualidade de seus jogos de 30 FPS para 60 FPS ou de 60 FPS para 120 FPS.</h3>
-                <ul class="card__lista">
-                    <li>
-                        <img src="assets/box.png" alt="Caixa">
-                        <p>FFFG (FiveFPS Frame Generation)</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!--SPLIT TUNNELING -->
     <div class=" w-full flex flex-col justify-start items-start gap-y-[40px] px-[15px] md:px-[40px] py-[80px] mt-10">
@@ -589,23 +533,21 @@
                 <p class="text-[16px] text-[#FAFAFA] font-[400] text-center">Com apenas alguns
                     cliques, você será capaz de usar todas nossas otimizações e nossa Inteligência Artificial!</p>
             </div>
-            <div class="flex justify-start items-start gap-[40px]">
-                <div class="relative aspect-w-16 aspect-h-9 xl:w-[700px] rounded-[4px] overflow-hidden cursor-pointer">
-                    <div class="relative h-[400px] flex justify-center items-center">
-                        <div class="w-full h-full absolute top-[0px] left-[0px]" style="opacity: 1;">
-                            <div class="absolute top-[60px] left-[60px]" style="opacity: 1;">
-                                <div class="w-[1px] h-[1px] pointer-events-none"
-                                    style="box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 400px 100px;"></div>
-                            </div>
-                            <div class="absolute bottom-[60px] right-[60px]" style="opacity: 1;">
-                                <div class="w-[1px] h-[1px] pointer-events-none"
-                                    style="box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 400px 100px;"></div>
-                            </div><img alt="" src="/assets/wow-with-perf-overlay.webp" width="100%" style="opacity: 1;">
+            <div class="w-full flex flex-col justify-start items-start gap-[40px]">
+                <div class="relative w-full rounded-[4px] overflow-hidden cursor-pointer">
+                    <div class="w-full" style="opacity: 1;">
+                        <div class="absolute top-[60px] left-[60px]" style="opacity: 0;">
+                            <div class="w-[1px] h-[1px] pointer-events-none"
+                                style="box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 400px 100px;"></div>
                         </div>
+                        <div class="absolute bottom-[60px] right-[60px]" style="opacity: 0;">
+                            <div class="w-[1px] h-[1px] pointer-events-none"
+                                style="box-shadow: rgba(255, 255, 255, 0.5) 0px 0px 400px 100px;"></div>
+                        </div><img alt="" src="./assets/cs2-with-perf-overlay.webp" width="100%" style="opacity: 1;">
                     </div>
                 </div>
-                <div class="w-full xl:w-auto grid grid-cols-2 gap-[20px]">
-                    <div class="w-[200px] h-[150px] flex flex-col justify-start items-start gap-y-[10px]">
+                <div class="w-full grid grid-cols-2 gap-[40px]">
+                    <div class="w-full h-[150px] flex flex-col justify-start items-start gap-y-[10px]">
                         <div class="flex justify-start items-center gap-x-[10px]">
                             <div
                                 class="w-[40px] h-[40px] flex justify-center items-center border border-[#BD162C] bg-[#BD162C40] rounded-[4px]">
@@ -614,10 +556,10 @@
                             <p class="max-w-[130px] text-[14px] text-[#FFFFFF] truncate">Windows
                                 Tweaks</p>
                         </div>
-                        <p class="text-[12px] text-[#BABABABA]">Aplique diversas otimizações
-                            para o seu sistema operacional e para sua placa gráfica!</p>
+                        <p class="text-[12px] text-[#BABABABA]">Aplique diversas otimizações para o
+                            seu sistema operacional e para sua placa gráfica!</p>
                     </div>
-                    <div class="w-[200px] h-[150px] flex flex-col justify-start items-start gap-y-[10px]">
+                    <div class="w-full h-[150px] flex flex-col justify-start items-start gap-y-[10px]">
                         <div class="flex justify-start items-center gap-x-[10px]">
                             <div
                                 class="w-[40px] h-[40px] flex justify-center items-center border border-[#BD162C] bg-[#BD162C40] rounded-[4px]">
@@ -628,7 +570,7 @@
                         <p class="text-[12px] text-[#BABABABA]">Otimize as threads do seu jogo e
                             congele serviços e aplicações enquanto estiver jogando!</p>
                     </div>
-                    <div class="w-[200px] h-[150px] flex flex-col justify-start items-start gap-y-[10px]">
+                    <div class="w-full h-[150px] flex flex-col justify-start items-start gap-y-[10px]">
                         <div class="flex justify-start items-center gap-x-[10px]">
                             <div
                                 class="w-[40px] h-[40px] flex justify-center items-center border border-[#BD162C] bg-[#BD162C40] rounded-[4px]">
@@ -640,14 +582,13 @@
                         <p class="text-[12px] text-[#BABABABA]">Aplique nossa tecnologia de
                             upscaling e frame generation no seu jogo para duplicar seu FPS!</p>
                     </div>
-                    <div class="w-[200px] h-[150px] flex flex-col justify-start items-start gap-y-[10px]">
+                    <div class="w-full h-[150px] flex flex-col justify-start items-start gap-y-[10px]">
                         <div class="flex justify-start items-center gap-x-[10px]">
                             <div
                                 class="w-[40px] h-[40px] flex justify-center items-center border border-[#BD162C] bg-[#BD162C40] rounded-[4px]">
-                                <img width="20" height="20" src="/assets/monitor.png">
+                                <img width="20" height="20" src="./assets/monitor.png">
                             </div>
-                            <p class="max-w-[130px] text-[14px] text-[#FFFFFF] truncate">Overlay
-                            </p>
+                            <p class="max-w-[130px] text-[14px] text-[#FFFFFF] truncate">Overlay</p>
                         </div>
                         <p class="text-[12px] text-[#BABABABA]">Além disso tudo, utilize nosso
                             overlay de performance para monitorar os recursos do seu PC em tempo real!</p>
