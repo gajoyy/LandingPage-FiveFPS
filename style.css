@@ -306,7 +306,7 @@ body {
 .modal-footer {
     color: #E1C111;
     font-size: 14px;
-    max-width: 100%;
+    max-width: 420px;
 }
 
 .modal-footer p {
@@ -415,6 +415,10 @@ body {
     #mensagemIdThreeMounths {
         font-weight: 400;
         color: var(--branco-terciario);
+    }
+
+    #obtenhaAgoraButton {
+        margin-top: 7px;
     }
 }
 
