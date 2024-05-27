@@ -340,4 +340,25 @@ body {
         display: none;
     }
 
+    .container__modal-line {
+        height: 65px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        background-color: #15201a;
+    }
+
+    .selecionado {
+        border: 2px solid var(--verde);
+    }
+
+    .container__modal-line .price__line {
+        font-size: 18px;
+    }
+
+    .container__modal-line span,
+    .container__modal-line input {
+        display: none;
+    }
+
 }

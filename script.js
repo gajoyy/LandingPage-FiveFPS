@@ -117,6 +117,22 @@ document.addEventListener("DOMContentLoaded", function () {
         closeModal();
     });
 
+    const options = document.querySelectorAll('.container__modal-line')
+
+    options.forEach(option => {
+        option.addEventListener('click', () => {
+            options.forEach(opt => {
+                opt.classList.remove('selecionado');
+            });
+
+            option.classList.add('selecionado');
+            const priceElement = document.getElementById('newPrice');
+            const linkElement = document.getElementById('linkObtenha');
+            const price = option.querySelector('.price__line').innerText;
+            priceElement.innerText = price;
+        })
+    })
+
     function openModal() {
         modal.style.display = "block";
         overlay.style.display = "block";
@@ -169,4 +185,5 @@ function uncheckOthers(clickedId) {
 
     document.getElementById('linkObtenha').href = links[clickedId];
 }
+
 
