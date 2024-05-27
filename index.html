@@ -11,6 +11,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/material-ui/4.12.4/index.js"
         integrity="sha512-wEnX3bNd/CdyrOFR0KIGlHihK/w9x3/It8Vc18aymEF/F/f1q0Mq8T+GSxF1wYUACLEGECapuIYQdQlKY1LBJw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1701617907332067');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1701617907332067&ev=PageView&noscript=1" /></noscript>
     <script src="./script.js" defer></script>
 </head>
 
@@ -958,6 +975,12 @@
                 Otimize seu sistema operacional | CNPJ: 46.397.059/0001-66</p>
         </div>
     </div>
+
+    <script>
+        document.getElementById('linkObtenha').addEventListener('click', function () {
+            fbq('track', 'linkObtenha');
+        });
+    </script>
 </body>
 
 </html>
