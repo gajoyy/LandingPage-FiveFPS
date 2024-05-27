@@ -133,11 +133,17 @@ const threeMounths = document.querySelector('#threeMounths');
 const oneMounth = document.querySelector('#oneMounth');
 
 function uncheckOthers(clickedId) {
-    var inputIds = ['oneYear', 'threeMounths', 'oneMounth'];
-    var prices = {
-        'oneYear': '539,99',
-        'threeMounths': '299,99',
-        'oneMounth': '46,90'
+    let inputIds = ['oneYear', 'threeMounths', 'oneMounth'];
+    let prices = {
+        'oneYear': '179,90',
+        'threeMounths': '69,90',
+        'oneMounth': '49,90'
+    };
+
+    let links = {
+        'oneYear': 'https://pay.kirvano.com/db68dad7-4561-4054-999f-e2ea72740b03',
+        'threeMounths': 'https://pay.kirvano.com/0f63f0f2-43d3-4d18-80b1-5a90135fbd61',
+        'oneMounth': 'https://pay.kirvano.com/8f37f047-8a92-422a-85f6-85436d7f5c45'
     };
 
     for (let i = 0; i < inputIds.length; i++) {
@@ -148,8 +154,19 @@ function uncheckOthers(clickedId) {
         }
     }
 
-    // Atualiza os valores nos elementos h2
-    document.getElementById('price').innerText = 'R$ ' + prices[clickedId];
-    document.getElementById('newPrice').innerText = 'R$ ' + prices[clickedId];
+    if (clickedId === 'oneYear') {
+        document.getElementById('price').style.visibility = 'visible'
+        document.getElementById('price').innerText = 'R$ 539,99';
+        document.getElementById('newPrice').innerText = 'R$ ' + prices[clickedId];
+    } else if (clickedId === 'threeMounths') {
+        document.getElementById('price').style.visibility = 'visible'
+        document.getElementById('price').innerText = 'R$ 134,99';
+        document.getElementById('newPrice').innerText = 'R$ ' + prices[clickedId];
+    } else {
+        document.getElementById('price').style.visibility = 'hidden';
+        document.getElementById('newPrice').innerText = 'R$ ' + prices[clickedId];
+    }
+
+    document.getElementById('linkObtenha').href = links[clickedId];
 }
 

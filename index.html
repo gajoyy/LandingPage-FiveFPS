@@ -101,7 +101,7 @@
             <div class="container__prices-modal">
                 <div class="container__modal-line">
                     <div style="display: flex; gap: 10px; align-items: center;">
-                        <input id="oneYear" type="checkbox" onclick="uncheckOthers('oneYear')"
+                        <input id="oneYear" type="checkbox" onclick="uncheckOthers('oneYear') " checked
                             onchange="toggleDisable(this)">
                         <h2 for="oneYear">UM ANO</h2>
                         <span>67% OFF</span>
@@ -120,7 +120,7 @@
                 <div class="container__modal-line">
                     <div style="display: flex; gap: 10px; align-items: center;">
                         <input id="oneMounth" type="checkbox" onclick="uncheckOthers('oneMounth')"
-                            onchange="toggleDisable(this)" checked>
+                            onchange="toggleDisable(this)">
                         <h2>UM MÊS</h2>
                     </div>
                     <h2>R$ 49,90</h2>
@@ -135,8 +135,8 @@
                         <span>Um Ano</span>
                     </div>
                     <div class="detalhes-precos">
-                        <h2 id="price" style="background-color: #E1C111; text-decoration: line-through;">R$ 49,90</h2>
-                        <h2 id="newPrice" style="background-color: var(--verde);">R$ 46,90</h2>
+                        <h2 id="price" style="background-color: #E1C111; text-decoration: line-through;">R$ 539,99</h2>
+                        <h2 id="newPrice" style="background-color: var(--verde);">R$ 179,90</h2>
                     </div>
                 </div>
             </div>
@@ -147,8 +147,8 @@
             </p>
 
         </div>
-        <button id="obtenhaAgoraButton" class="modal__botao"><a
-                href="https://pay.kirvano.com/8f37f047-8a92-422a-85f6-85436d7f5c45">OBTENHA
+        <button id="obtenhaAgoraButton" class="modal__botao"><a id="linkObtenha"
+                href="https://pay.kirvano.com/db68dad7-4561-4054-999f-e2ea72740b03" target="_blank">OBTENHA
                 AGORA!</a></button>
         <img src="assets/SELO.svg" alt="Selo" style="width: 80px; position: absolute; top: 93%; left: 92%;" id="selo">
     </div>
