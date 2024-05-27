@@ -280,7 +280,6 @@ body {
 .modal-footer {
     color: #E1C111;
     font-size: 14px;
-    max-width: 430px;
 }
 
 .modal-footer p {
@@ -330,6 +329,7 @@ body {
 
     #modalContent {
         width: 100%;
+        
     }
 
     .modal__botao {
@@ -341,11 +341,11 @@ body {
     }
 
     .container__modal-line {
-        height: 65px;
+        height: 80px;
         align-items: center;
         justify-content: center;
         flex-direction: column-reverse;
-        background-color: #15201a;
+        background-color: #333;
     }
 
     .selecionado {
@@ -361,4 +361,22 @@ body {
         display: none;
     }
 
+    .modal-footer {
+        max-height: 50px;
+    }
+
+    .modal-footer p {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 355px) {
+    .modal-footer p {
+        font-size: 10px;
+    }
+
+    .modal-header h2{
+        font-size: 14px;
+    }
 }
