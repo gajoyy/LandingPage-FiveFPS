@@ -7,6 +7,7 @@
     --branco-secundario: #FAFAFA;
     --branco-terciario: #BABABA;
     --vermelho: #BD162C;
+    --vermelho-escuro: #991526;
     --cinza: #222222;
     --verde: #2E8B57;
 }
@@ -28,6 +29,23 @@ body {
     .container__button-after-hero {
         margin-top: 100px;
     }
+}
+
+.after-hero__botao {
+    background-color: var(--vermelho);
+    color: var(--branco-secundario);
+    border: none;
+    font: bold;
+    padding: 8px;
+    border-radius: 4px;
+    width: 384px;
+    height: 48px;
+    text-align: center;
+}
+
+.after-hero__botao:hover {
+    background-color: var(--vermelho-escuro);
+    cursor: pointer;
 }
 
 .container__plans h1 {
@@ -288,7 +306,7 @@ body {
 .modal-footer {
     color: #E1C111;
     font-size: 14px;
-    max-width: 420px;
+    max-width: 100%;
 }
 
 .modal-footer p {
@@ -331,10 +349,10 @@ body {
 
     .modal {
         width: 100%;
-        height: 600px;
+        height: 670px;
         position: fixed;
-        top: 65%;
-        left: 49%;
+        top: 70%;
+        left: 50%;
     }
 
     #modalContent {
@@ -350,6 +368,10 @@ body {
         display: none;
     }
 
+    #tunnel {
+        display: none;
+    }
+
     .container__modal-line {
         height: 80px;
         align-items: center;
@@ -361,10 +383,12 @@ body {
 
     .selecionado {
         border: 2px solid var(--verde);
+        box-shadow: rgb(29, 89, 56) 0px 0px 19px 0px;
+        border: 2px solid rgb(29, 89, 56);
     }
 
     .container__modal-line .price__line {
-        font-size: 18px;
+        font-size: 21px;
     }
 
     .container__modal-line span,
@@ -386,14 +410,25 @@ body {
         display: none;
     }
 
+    #mensagemIdOneYear,
+    #mensagemIdOneMounth,
+    #mensagemIdThreeMounths {
+        font-weight: 400;
+        color: var(--branco-terciario);
+    }
 }
 
-@media (max-width: 355px) {
-    .modal-footer p {
-        font-size: 10px;
-    }
+@media (max-width: 415px) {
 
-    .modal-header h2{
-        font-size: 14px;
+    .after-hero__botao {
+        width: 290px;
+        margin-top: -80px;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .after-hero__botao {
+        margin-top: -80px;
     }
 }

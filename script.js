@@ -6,6 +6,31 @@ const images = [
 
 let currentIndex = 0;
 
+let texts = {
+    'oneYear': 'Um Ano',
+    'threeMounths': 'Três Meses',
+    'oneMounth': 'Um Mês'
+};
+
+const mobileTexts = {
+    'oneYear': 'Chave de ativação válida por 1 ano',
+    'threeMounths': 'Chave de ativação válida por 3 meses',
+    'oneMounth': 'Chave de ativação válida por 1 mês'
+};
+
+let inputIds = ['oneYear', 'threeMounths', 'oneMounth'];
+let prices = {
+    'oneYear': '179,90',
+    'threeMounths': '69,90',
+    'oneMounth': '49,90'
+};
+
+let links = {
+    'oneYear': 'https://pay.kirvano.com/db68dad7-4561-4054-999f-e2ea72740b03',
+    'threeMounths': 'https://pay.kirvano.com/0f63f0f2-43d3-4d18-80b1-5a90135fbd61',
+    'oneMounth': 'https://pay.kirvano.com/8f37f047-8a92-422a-85f6-85436d7f5c45'
+};
+
 function fadeOut(element, duration, callback) {
     let opacity = 1;
     const interval = 50;
@@ -89,6 +114,21 @@ function blink() {
 
 setInterval(blink, 800);
 
+function alterarTextosParaMobile() {
+    const larguraDaTela = window.innerWidth;
+    const maxWidth = 768;
+
+    if (larguraDaTela <= maxWidth) {
+        document.getElementById('mensagemIdOneYear').innerText = 'Chave de ativação válida por 12 meses';
+        document.getElementById('mensagemIdThreeMounths').innerText = 'Chave de ativação válida por 3 meses';
+        document.getElementById('mensagemIdOneMounth').innerText = 'Chave de ativação válida por 1 mês';
+    } else {
+        document.getElementById('mensagemIdOneYear').innerText = 'UM ANO';
+        document.getElementById('mensagemIdThreeMounths').innerText = 'TRÊS MESES';
+        document.getElementById('mensagemIdOneMounth').innerText = 'UM MÊS';
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     const openModalButton = document.getElementById("openModalBtn");
     const modal = document.getElementById("modal");
@@ -149,25 +189,6 @@ const threeMounths = document.querySelector('#threeMounths');
 const oneMounth = document.querySelector('#oneMounth');
 
 function uncheckOthers(clickedId) {
-    let inputIds = ['oneYear', 'threeMounths', 'oneMounth'];
-    let prices = {
-        'oneYear': '179,90',
-        'threeMounths': '69,90',
-        'oneMounth': '49,90'
-    };
-
-    let links = {
-        'oneYear': 'https://pay.kirvano.com/db68dad7-4561-4054-999f-e2ea72740b03',
-        'threeMounths': 'https://pay.kirvano.com/0f63f0f2-43d3-4d18-80b1-5a90135fbd61',
-        'oneMounth': 'https://pay.kirvano.com/8f37f047-8a92-422a-85f6-85436d7f5c45'
-    };
-
-    let texts = {
-        'oneYear': 'Um Ano',
-        'threeMounths': 'Três Meses',
-        'oneMounth': 'Um Mês'
-    };
-
     for (let i = 0; i < inputIds.length; i++) {
         var currentId = inputIds[i];
 
@@ -205,3 +226,5 @@ function toggleDisable(checkbox) {
 }
 
 
+window.onload = alterarTextosParaMobile;
+window.addEventListener('resize', alterarTextosParaMobile);

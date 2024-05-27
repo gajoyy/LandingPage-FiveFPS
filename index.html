@@ -78,7 +78,7 @@
 
     <div class="container__button-after-hero flex justify-center">
         <button id="openModalBtn"
-            class="bg-[#BD162C] text-[#FAFAFA] border-none font-bold p-2 rounded w-96 h-12 text-center hover:bg-[#991526] cursor-pointer">OBTENHA
+            class="after-hero__botao">OBTENHA
             AGORA!</button>
     </div>
 
@@ -103,7 +103,7 @@
                     <div style="display: flex; gap: 10px; align-items: center;">
                         <input id="oneYear" type="checkbox" onclick="uncheckOthers('oneYear') " checked
                             onchange="toggleDisable(this)">
-                        <h2 for="oneYear">UM ANO</h2>
+                        <h2 for="oneYear" id="mensagemIdOneYear">UM ANO</h2>
                         <span>67% OFF</span>
                     </div>
                     <h2 class="price__line">R$ 179,90</h2>
@@ -112,7 +112,7 @@
                     <div style="display: flex; gap: 10px; align-items: center;">
                         <input id="threeMounths" type="checkbox" onclick="uncheckOthers('threeMounths')"
                             onchange="toggleDisable(this)">
-                        <h2>TRÊS MESES</h2>
+                        <h2 id="mensagemIdThreeMounths">TRÊS MESES</h2>
                         <span>48% OFF</span>
                     </div>
                     <h2 class="price__line">R$ 69,90</h2>
@@ -121,7 +121,7 @@
                     <div style="display: flex; gap: 10px; align-items: center;">
                         <input id="oneMounth" type="checkbox" onclick="uncheckOthers('oneMounth')"
                             onchange="toggleDisable(this)">
-                        <h2>UM MÊS</h2>
+                        <h2 id="mensagemIdOneMounth">UM MÊS</h2>
                     </div>
                     <h2 class="price__line">R$ 49,90</h2>
                 </div>
@@ -268,7 +268,7 @@
                 </div>
             </div>
             <div class="w-[250px] h-[300px] flex flex-col justify-center items-center gap-y-[20px]">
-                <div class="w-[100px] h-[100px]"
+                <div class="w-[120px] h-[100px]"
                     style="background-image: url(./assets/gpu.png); background-size: contain; background-position: center center; background-repeat: no-repeat;">
                 </div>
                 <div class="w-full text-center">
@@ -290,7 +290,7 @@
 
     <!--INTELIGÊNCIA ARTIFICIAL-->
     <div
-        class="relative w-full flex flex-col justify-start items-start gap-y-[50px] pt-[50px] pb-[100px] overflow-hidden">
+        class="relative w-full flex flex-col justify-start items-start gap-y-[50px] pt-[50px] overflow-hidden">
         <div class="absolute w-full flex justify-end bottom-[0px] right-[30px]">
             <div class="w-[1px] h-[1px] pointer-events-none" id="boxShadow1">
             </div>
@@ -306,7 +306,7 @@
         <div class="w-full flex justify-center items-center">
             <img src="./assets/computer.png" alt="Monitor" width="800">
         </div>
-        <div class="w-full flex flex-wrap justify-center items-center gap-[40px] px-[20px]">
+        <div class="w-full flex flex-wrap justify-center items-center gap-[40px] px-[20px] pb-[100px]">
             <div
                 class="w-[400px] h-[500px] bg-[#222222] flex flex-col justify-start items-start gap-y-[20px] border border-[rgba(255,255,255,0.1)] rounded-[4px] p-[20px]">
                 <h2 class="text-[18px] bg-[#BD162C] text-[#FFFFFF] font-[700] px-[10px] py-[5px] rounded-[4px]">
@@ -371,7 +371,7 @@
 
     <!--SPLIT TUNNELING -->
     <div
-        class="relative w-full flex flex-col justify-start items-start gap-y-[40px] px-[15px] md:px-[40px] py-[80px] mt-10 overflow-hidden">
+        class="relative w-full flex flex-col justify-start items-start gap-y-[40px] px-[15px] md:px-[40px] py-[80px] overflow-hidden">
         <div class="absolute w-full flex justify-start top-[0px] left-[0px]">
             <div class="w-[1px] h-[1px] pointer-events-none" id="boxShadow2">
             </div>
@@ -570,7 +570,7 @@
                                 </path>
                                 <path d="M17 6h2v2h-2zm-3 0h2v2h-2zm3 10h2v2h-2zm-3 0h2v2h-2z"></path>
                             </svg>
-                            <p class="text-[18px] text-[#FFFFFF] font-[700]">TSP01-01<sup
+                            <p class="text-[18px] text-[#FFFFFF] font-[700]">TSP01-01<sup id="tunnel"
                                     class="text-[12px] font-[400] ml-[10px]">(tunnel-tsp01-01.fivefps.com)</sup></p>
                         </div>
                         <div class="flex-1 flex justify-end items-center">
@@ -590,7 +590,7 @@
                                 </path>
                                 <path d="M17 6h2v2h-2zm-3 0h2v2h-2zm3 10h2v2h-2zm-3 0h2v2h-2z"></path>
                             </svg>
-                            <p class="text-[18px] text-[#FFFFFF] font-[700]">TSP01-02<sup
+                            <p class="text-[18px] text-[#FFFFFF] font-[700]">TSP01-02<sup id="tunnel"
                                     class="text-[12px] font-[400] ml-[10px]">(tunnel-tsp01-02.fivefps.com)</sup></p>
                         </div>
                         <div class="flex-1 flex justify-end items-center">
@@ -610,7 +610,7 @@
                                 </path>
                                 <path d="M17 6h2v2h-2zm-3 0h2v2h-2zm3 10h2v2h-2zm-3 0h2v2h-2z"></path>
                             </svg>
-                            <p class="text-[18px] text-[#FFFFFF] font-[700]">TSP01-03<sup
+                            <p class="text-[18px] text-[#FFFFFF] font-[700]">TSP01-03<sup id="tunnel"
                                     class="text-[12px] font-[400] ml-[10px]">(tunnel-tsp01-03.fivefps.com)</sup></p>
                         </div>
                         <div class="flex-1 flex justify-end items-center">
@@ -630,7 +630,7 @@
                                 </path>
                                 <path d="M17 6h2v2h-2zm-3 0h2v2h-2zm3 10h2v2h-2zm-3 0h2v2h-2z"></path>
                             </svg>
-                            <p class="text-[18px] text-[#FFFFFF] font-[700]">TSP01-04<sup
+                            <p class="text-[18px] text-[#FFFFFF] font-[700]">TSP01-04<sup id="tunnel"
                                     class="text-[12px] font-[400] ml-[10px]">(tunnel-tsp01-04.fivefps.com)</sup></p>
                         </div>
                         <div class="flex-1 flex justify-end items-center">
@@ -650,7 +650,7 @@
                                 </path>
                                 <path d="M17 6h2v2h-2zm-3 0h2v2h-2zm3 10h2v2h-2zm-3 0h2v2h-2z"></path>
                             </svg>
-                            <p class="text-[18px] text-[#FFFFFF] font-[700]">TSP01-05<sup
+                            <p class="text-[18px] text-[#FFFFFF] font-[700]">TSP01-05<sup id="tunnel"
                                     class="text-[12px] font-[400] ml-[10px]">(tunnel-tsp01-05.fivefps.com)</sup></p>
                         </div>
                         <div class="flex-1 flex justify-end items-center">
@@ -670,7 +670,7 @@
                                 </path>
                                 <path d="M17 6h2v2h-2zm-3 0h2v2h-2zm3 10h2v2h-2zm-3 0h2v2h-2z"></path>
                             </svg>
-                            <p class="text-[18px] text-[#FFFFFF] font-[700]">TSP01-06<sup
+                            <p class="text-[18px] text-[#FFFFFF] font-[700]">TSP01-06<sup id="tunnel"
                                     class="text-[12px] font-[400] ml-[10px]">(tunnel-tsp01-06.fivefps.com)</sup></p>
                         </div>
                         <div class="flex-1 flex justify-end items-center">
@@ -708,8 +708,8 @@
                         </div><img alt="" src="./assets/cs2-with-perf-overlay.webp" width="100%" id="experimenteImg">
                     </div>
                 </div>
-                <div class="w-full grid grid-cols-2 gap-[20px]" id="experimentContent">
-                    <div class="w-full h-[150px] flex flex-col justify-start items-start gap-y-[10px]">
+                <div class="w-full grid grid-cols-2 gap-y-[20px] gap-x-[60px]" id="experimentContent">
+                    <div class="w-full h-[150px] flex flex-col justify-start items-start gap-y-[10px] gap-x-[20px]">
                         <div class="flex justify-start items-center gap-x-[10px]">
                             <div
                                 class="w-[40px] h-[40px] flex justify-center items-center border border-[#BD162C] bg-[#BD162C40] rounded-[4px]">
