@@ -101,7 +101,8 @@
             <div class="container__prices-modal">
                 <div class="container__modal-line">
                     <div style="display: flex; gap: 10px; align-items: center;">
-                        <input id="oneYear" type="checkbox" onclick="uncheckOthers('oneYear')" checked>
+                        <input id="oneYear" type="checkbox" onclick="uncheckOthers('oneYear')"
+                            onchange="toggleDisable(this)">
                         <h2 for="oneYear">UM ANO</h2>
                         <span>67% OFF</span>
                     </div>
@@ -109,7 +110,8 @@
                 </div>
                 <div class="container__modal-line">
                     <div style="display: flex; gap: 10px; align-items: center;">
-                        <input id="threeMounths" type="checkbox" onclick="uncheckOthers('threeMounths')">
+                        <input id="threeMounths" type="checkbox" onclick="uncheckOthers('threeMounths')"
+                            onchange="toggleDisable(this)">
                         <h2>TRÊS MESES</h2>
                         <span>48% OFF</span>
                     </div>
@@ -117,10 +119,11 @@
                 </div>
                 <div class="container__modal-line">
                     <div style="display: flex; gap: 10px; align-items: center;">
-                        <input id="oneMounth" type="checkbox" onclick="uncheckOthers('oneMounth')">
+                        <input id="oneMounth" type="checkbox" onclick="uncheckOthers('oneMounth')"
+                            onchange="toggleDisable(this)" checked>
                         <h2>UM MÊS</h2>
                     </div>
-                    <h2>R$ 29,90</h2>
+                    <h2>R$ 49,90</h2>
                 </div>
             </div>
             <div style="width: 100%; background-color: #393939; height: 2px; opacity: 0.6; border-radius: 10px;"></div>
@@ -132,8 +135,8 @@
                         <span>Um Ano</span>
                     </div>
                     <div class="detalhes-precos">
-                        <h2 style="background-color: #E1C111; text-decoration: line-through;">R$ 539,99</h2>
-                        <h2 style="background-color: var(--verde);">R$ 179,90</h2>
+                        <h2 id="price" style="background-color: #E1C111; text-decoration: line-through;">R$ 49,90</h2>
+                        <h2 id="newPrice" style="background-color: var(--verde);">R$ 46,90</h2>
                     </div>
                 </div>
             </div>
@@ -144,7 +147,9 @@
             </p>
 
         </div>
-        <button id="obtenhaAgoraButton" class="modal__botao">OBTENHA AGORA!</button>
+        <button id="obtenhaAgoraButton" class="modal__botao"><a
+                href="https://pay.kirvano.com/8f37f047-8a92-422a-85f6-85436d7f5c45">OBTENHA
+                AGORA!</a></button>
         <img src="assets/SELO.svg" alt="Selo" style="width: 80px; position: absolute; top: 93%; left: 92%;" id="selo">
     </div>
 
@@ -861,7 +866,7 @@
             </ul>
         </div>
         <div class="flex justify-center align-center mt-10">
-            <button onclick="openModal()"
+            <button id="secondButton"
                 class="border-none font-extrabold p-4 rounded-sm w-[360px] h-[50px] text-center text-[#FAFAFA] bg-[#BD162C] hover:bg-[#991526]">OBTENHA
                 AGORA!</button>
         </div>

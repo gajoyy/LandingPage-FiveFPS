@@ -95,6 +95,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const overlay = document.getElementById("overlay");
     const closeButton = document.getElementById("closeButton");
     const obtenhaAgoraButton = document.getElementById("obtenhaAgoraButton");
+    const secondButton = document.getElementById("secondButton");
+
+    secondButton.addEventListener('click', () => {
+        openModal();
+    })
 
     openModalButton.addEventListener("click", () => {
         openModal();
@@ -128,8 +133,12 @@ const threeMounths = document.querySelector('#threeMounths');
 const oneMounth = document.querySelector('#oneMounth');
 
 function uncheckOthers(clickedId) {
-
     var inputIds = ['oneYear', 'threeMounths', 'oneMounth'];
+    var prices = {
+        'oneYear': '539,99',
+        'threeMounths': '299,99',
+        'oneMounth': '46,90'
+    };
 
     for (let i = 0; i < inputIds.length; i++) {
         var currentId = inputIds[i];
@@ -138,4 +147,9 @@ function uncheckOthers(clickedId) {
             document.getElementById(currentId).checked = false;
         }
     }
+
+    // Atualiza os valores nos elementos h2
+    document.getElementById('price').innerText = 'R$ ' + prices[clickedId];
+    document.getElementById('newPrice').innerText = 'R$ ' + prices[clickedId];
 }
+
