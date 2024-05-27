@@ -162,6 +162,12 @@ function uncheckOthers(clickedId) {
         'oneMounth': 'https://pay.kirvano.com/8f37f047-8a92-422a-85f6-85436d7f5c45'
     };
 
+    let texts = {
+        'oneYear': 'Um Ano',
+        'threeMounths': 'Três Meses',
+        'oneMounth': 'Um Mês'
+    };
+
     for (let i = 0; i < inputIds.length; i++) {
         var currentId = inputIds[i];
 
@@ -184,6 +190,18 @@ function uncheckOthers(clickedId) {
     }
 
     document.getElementById('linkObtenha').href = links[clickedId];
+    document.getElementById('relogioText').innerText = texts[clickedId];
+}
+
+function selectOption(optionId) {
+    document.getElementById(optionId).checked = true;
+    uncheckOthers(optionId);
+}
+
+function toggleDisable(checkbox) {
+    if (!checkbox.checked) {
+        checkbox.checked = true;
+    }
 }
 
 
