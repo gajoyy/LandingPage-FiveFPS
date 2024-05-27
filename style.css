@@ -328,6 +328,10 @@ body {
         top: 71%;
     }
 
+    #modalContent {
+        width: 100%;
+    }
+
     .modal__botao {
         background-color: var(--vermelho);
     }
