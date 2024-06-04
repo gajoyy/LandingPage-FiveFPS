@@ -18,12 +18,12 @@ const mobileTexts = {
     'oneMounth': 'Chave de ativação válida por 1 mês'
 };
 
-let inputIds = ['oneYear', 'threeMounths', 'oneMounth'];
-let prices = {
-    'oneYear': '179,90',
-    'threeMounths': '69,90',
-    'oneMounth': '49,90'
-};
+// let inputIds = ['oneYear', 'threeMounths', 'oneMounth'];
+// let prices = {
+//     'oneYear': '179,90',
+//     'threeMounths': '69,90',
+//     'oneMounth': '49,90'
+// };
 
 let links = {
     'oneYear': 'https://pay.kirvano.com/db68dad7-4561-4054-999f-e2ea72740b03',
@@ -113,118 +113,3 @@ function blink() {
 }
 
 setInterval(blink, 800);
-
-function alterarTextosParaMobile() {
-    const larguraDaTela = window.innerWidth;
-    const maxWidth = 768;
-
-    if (larguraDaTela <= maxWidth) {
-        document.getElementById('mensagemIdOneYear').innerText = 'Chave de ativação válida por 12 meses';
-        document.getElementById('mensagemIdThreeMounths').innerText = 'Chave de ativação válida por 3 meses';
-        document.getElementById('mensagemIdOneMounth').innerText = 'Chave de ativação válida por 1 mês';
-    } else {
-        document.getElementById('mensagemIdOneYear').innerText = 'UM ANO';
-        document.getElementById('mensagemIdThreeMounths').innerText = 'TRÊS MESES';
-        document.getElementById('mensagemIdOneMounth').innerText = 'UM MÊS';
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const openModalButton = document.getElementById("openModalBtn");
-    const modal = document.getElementById("modal");
-    const overlay = document.getElementById("overlay");
-    const closeButton = document.getElementById("closeButton");
-    const obtenhaAgoraButton = document.getElementById("obtenhaAgoraButton");
-    const secondButton = document.getElementById("secondButton");
-
-    secondButton.addEventListener('click', () => {
-        openModal();
-    })
-
-    openModalButton.addEventListener("click", () => {
-        openModal();
-    });
-
-    closeButton.addEventListener("click", () => {
-        closeModal();
-    });
-
-    overlay.addEventListener("click", () => {
-        closeModal();
-    });
-
-    obtenhaAgoraButton.addEventListener("click", () => {
-        closeModal();
-    });
-
-    const options = document.querySelectorAll('.container__modal-line')
-
-    options.forEach(option => {
-        option.addEventListener('click', () => {
-            options.forEach(opt => {
-                opt.classList.remove('selecionado');
-            });
-
-            option.classList.add('selecionado');
-            const priceElement = document.getElementById('newPrice');
-            const linkElement = document.getElementById('linkObtenha');
-            const price = option.querySelector('.price__line').innerText;
-            priceElement.innerText = price;
-        })
-    })
-
-    function openModal() {
-        modal.style.display = "block";
-        overlay.style.display = "block";
-    }
-
-    function closeModal() {
-        modal.style.display = "none";
-        overlay.style.display = "none";
-    }
-});
-
-const oneYear = document.querySelector('#oneYear');
-const threeMounths = document.querySelector('#threeMounths');
-const oneMounth = document.querySelector('#oneMounth');
-
-function uncheckOthers(clickedId) {
-    for (let i = 0; i < inputIds.length; i++) {
-        var currentId = inputIds[i];
-
-        if (currentId !== clickedId) {
-            document.getElementById(currentId).checked = false;
-        }
-    }
-
-    if (clickedId === 'oneYear') {
-        document.getElementById('price').style.visibility = 'visible'
-        document.getElementById('price').innerText = 'R$ 539,99';
-        document.getElementById('newPrice').innerText = 'R$ ' + prices[clickedId];
-    } else if (clickedId === 'threeMounths') {
-        document.getElementById('price').style.visibility = 'visible'
-        document.getElementById('price').innerText = 'R$ 134,99';
-        document.getElementById('newPrice').innerText = 'R$ ' + prices[clickedId];
-    } else {
-        document.getElementById('price').style.visibility = 'hidden';
-        document.getElementById('newPrice').innerText = 'R$ ' + prices[clickedId];
-    }
-
-    document.getElementById('linkObtenha').href = links[clickedId];
-    document.getElementById('relogioText').innerText = texts[clickedId];
-}
-
-function selectOption(optionId) {
-    document.getElementById(optionId).checked = true;
-    uncheckOthers(optionId);
-}
-
-function toggleDisable(checkbox) {
-    if (!checkbox.checked) {
-        checkbox.checked = true;
-    }
-}
-
-
-window.onload = alterarTextosParaMobile;
-window.addEventListener('resize', alterarTextosParaMobile);

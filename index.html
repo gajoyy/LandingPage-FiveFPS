@@ -93,83 +93,17 @@
         </div>
     </div>
 
-    <div class="container__button-after-hero flex justify-center">
-        <button id="openModalBtn" class="after-hero__botao">OBTENHA
-            AGORA!</button>
-    </div>
-
-    <!-- MODAL -->
-    <div id="overlay"></div>
-
-    <div class="modal" id="modal">
-        <div class="modal-content" id="modalContent">
-            <div class="modal-header">
-                <div style="display: flex; align-items: center; gap: 5px;">
-                    <img src="./assets/1f60e.png" alt="Emoji">
-                    <h2>Adquira o tempo de acesso</h2>
-                </div>
-                <button id="closeButton">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>Garanta agora o seu tempo de acesso ao FiveFPS!</p>
-            </div>
-            <div style="width: 100%; background-color: #393939; height: 2px; opacity: 0.6; border-radius: 10px;"></div>
-            <div class="container__prices-modal">
-                <div class="container__modal-line selecionado" id="oneYearDiv" onclick="selectOption('oneYear')">
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <input id="oneYear" type="checkbox" onclick="uncheckOthers('oneYear') " checked
-                            onchange="toggleDisable(this)">
-                        <h2 for="oneYear" id="mensagemIdOneYear">UM ANO</h2>
-                        <span>67% OFF</span>
-                    </div>
-                    <h2 class="price__line">R$ 179,90</h2>
-                </div>
-                <div class="container__modal-line" id="threeMounthsDiv" onclick="selectOption('threeMounths')">
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <input id="threeMounths" type="checkbox" onclick="uncheckOthers('threeMounths')"
-                            onchange="toggleDisable(this)">
-                        <h2 id="mensagemIdThreeMounths">TRÊS MESES</h2>
-                        <span>48% OFF</span>
-                    </div>
-                    <h2 class="price__line">R$ 69,90</h2>
-                </div>
-                <div class="container__modal-line" id="oneMounthDiv" onclick="uncheckOthers('oneMounth')">
-                    <div style="display: flex; gap: 10px; align-items: center;">
-                        <input id="oneMounth" type="checkbox" onclick="uncheckOthers('oneMounth')"
-                            onchange="toggleDisable(this)">
-                        <h2 id="mensagemIdOneMounth">UM MÊS</h2>
-                    </div>
-                    <h2 class="price__line">R$ 49,90</h2>
-                </div>
-            </div>
-            <div style="width: 100%; background-color: #393939; height: 2px; opacity: 0.6; border-radius: 10px;"></div>
-            <div class="modal__container-detalhes">
-                <h1>Detalhes da Compra</h1>
-                <div class="modal-detalhes">
-                    <div class="detalhes-emoji">
-                        <img src="./assets/RELOGINHO.png" alt="Relógio" style="width: 14px;">
-                        <span id="relogioText">Um Ano</span>
-                    </div>
-                    <div class="detalhes-precos">
-                        <h2 id="price" style="background-color: #E1C111; text-decoration: line-through;">R$ 539,99</h2>
-                        <h2 id="newPrice" style="background-color: var(--verde);">R$ 179,90</h2>
-                    </div>
-                </div>
+    <div class="container__preco">
+        <div class="box-preco">
+            <span>de R$89,90</span>
+            <h1>por 6x R$6,31</h1>
+            <span>ou R$37,90 à vista</span>
+            <div class="container__button-after-hero flex justify-center">
+                <a href="https://pay.kirvano.com/8f37f047-8a92-422a-85f6-85436d7f5c45"><button class="after-hero__botao">OBTENHA
+                    AGORA!</button></a>
             </div>
         </div>
-        <div class="modal-footer">
-            <p>Todas as instruções para download do app serão enviadas para seu e-mail após a aprovação
-                da compra.
-            </p>
-
-        </div>
-        <button id="obtenhaAgoraButton" class="modal__botao">
-            <a id="linkObtenha" href="https://pay.kirvano.com/db68dad7-4561-4054-999f-e2ea72740b03" target="_blank">
-                OBTENHA AGORA!</a>
-        </button>
-        <img src="assets/SELO.svg" alt="Selo" style="width: 80px; position: absolute; top: 93%; left: 92%;" id="selo">
     </div>
-
 
     <!--TUTORIAL-->
     <div class="relative w-full flex flex-col justify-start items-start gap-y-[50px] py-[100px] overflow-hidden">
@@ -828,7 +762,7 @@
         <div class="plans__container-card">
             <ul class="plans__card-lista">
                 <h2>PREMIUM</h2>
-                <h1>R$ 49,90 <span>/ mês</span>
+                <h1>R$ 37,90 <span>/ mês</span>
                 </h1>
                 <p>Descubra um mundo de possibilidades avançadas com o FiveFPS Premium</p>
                 <li>
@@ -882,9 +816,11 @@
             </ul>
         </div>
         <div class="flex justify-center align-center mt-10">
+            <a href="https://pay.kirvano.com/8f37f047-8a92-422a-85f6-85436d7f5c45">
             <button id="secondButton"
                 class="border-none font-extrabold p-4 rounded-sm w-[360px] h-[50px] text-center text-[#FAFAFA] bg-[#BD162C] hover:bg-[#991526]">OBTENHA
                 AGORA!</button>
+            </a>
         </div>
     </section>
 
